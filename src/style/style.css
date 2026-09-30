@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    --background-color: #3f5a6f;
+    --container-color: #2389da;
+    --icon-color: #5abcd8;
+    --text: #ffffff;
+    --olive-blue: #0f4772;
+    --font-ff: "JetBrains Mono", monospace;
+    --result-color: #1c252c;
+    --output: #c9e5fa;
+}
+
+
+
+body{
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-ff);
+    justify-content: space-between;
+}
+
+h1{
+    font-weight: 300;
+    font-size: 42px;
+    color: var(--text);
+}
+
+li{
+    color: var(--result-color);
+    font-size: 30px;
+    list-style-type: none;
+}
+
+li strong{
+    color: var(--output);
+}
+
+.desc{
+    font-size: 20px;
+    color: var(--olive-blue);
+    position: relative;
+    bottom: 45px;
+}
+
+.foot{
+    position: relative;
+    top: 40px;
+    font-size: 15px;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.icon{
+    width: 100px;
+    height: 100px;
+    color: var(--icon-color);
+}
+
+.overall-card-container{
+    background-color: var(--container-color);
+    width: 600px;
+    height: 400px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 100px;
+}
