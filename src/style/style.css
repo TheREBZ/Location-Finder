@@ -36,6 +36,7 @@ li{
 
 li strong{
     color: var(--output);
+    font-size: 22px;
 }
 
 .desc{
@@ -43,6 +44,20 @@ li strong{
     color: var(--olive-blue);
     position: relative;
     bottom: 45px;
+}
+
+.error{
+    color: red;
+    font-size: 20px;
+    position: relative;
+    bottom: 45px;
+}
+
+.found{
+    color: rgb(125, 228, 125);
+    font-size: 25px;
+    position: relative;
+    bottom: 40px;
 }
 
 .foot{
