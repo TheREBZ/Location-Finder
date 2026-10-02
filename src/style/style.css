@@ -1,93 +1,133 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Manrope:wght@200..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Space+Grotesk:wght@300..700&display=swap');
 
-:root{
-    --background-color: #3f5a6f;
-    --container-color: #2389da;
-    --icon-color: #5abcd8;
-    --text: #ffffff;
-    --olive-blue: #0f4772;
-    --font-ff: "JetBrains Mono", monospace;
-    --result-color: #1c252c;
-    --output: #c9e5fa;
+:root {
+--background-color: #3f5a6f;
+--container-color: #2389da;
+--icon-color: #5abcd8;
+--text: #ffffff;
+--olive-blue: #0f4772;
+--font-ff: "JetBrains Mono", monospace;
+--result-color: #1c252c;
+--output: #c9e5fa;
 }
 
-
-
-body{
-    background-color: var(--background-color);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    font-family: var(--font-ff);
-    justify-content: space-between;
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
 }
 
-h1{
-    font-weight: 300;
-    font-size: 42px;
-    color: var(--text);
+body {
+background-color: var(--background-color);
+font-family: var(--font-ff);
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+padding: 20px;
+gap: 40px;
 }
 
-li{
-    color: var(--result-color);
-    font-size: 30px;
-    list-style-type: none;
+/* --- Header Section --- */
+.header {
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 20px;
 }
 
-li strong{
-    color: var(--output);
-    font-size: 22px;
+h1 {
+font-weight: 300;
+font-size: clamp(28px, 5vw, 42px);
+color: var(--text);
 }
 
-.desc{
-    font-size: 20px;
-    color: var(--olive-blue);
-    position: relative;
-    bottom: 45px;
+.icon {
+width: clamp(50px, 8vw, 100px);
+height: clamp(50px, 8vw, 100px);
+color: var(--icon-color);
 }
 
-.error{
-    color: red;
-    font-size: 20px;
-    position: relative;
-    bottom: 45px;
+/* --- Main Card Container --- */
+.overall-card-container {
+background-color: var(--container-color);
+width: 100%;
+max-width: 600px;
+border-radius: 20px;
+padding: 40px 30px;
+box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.found{
-    color: rgb(125, 228, 125);
-    font-size: 25px;
-    position: relative;
-    bottom: 40px;
+.card-content {
+display: flex;
+flex-direction: column;
+gap: 20px;
 }
 
-.foot{
-    position: relative;
-    top: 40px;
-    font-size: 15px;
+/* --- Typo & Elements --- */
+.desc {
+font-size: 20px;
+color: var(--olive-blue);
 }
 
-.header{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+.error {
+color: red;
+font-size: 20px;
 }
 
-.icon{
-    width: 100px;
-    height: 100px;
-    color: var(--icon-color);
+.found {
+color: rgb(125, 228, 125);
+font-size: 25px;
 }
 
-.overall-card-container{
-    background-color: var(--container-color);
-    width: 600px;
-    height: 400px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    top: 100px;
+ol {
+display: flex;
+flex-direction: column;
+gap: 12px;
+margin: 15px 0;
+}
+
+li {
+color: var(--result-color);
+font-size: 24px;
+list-style-type: none;
+line-height: 1.4;
+word-break: break-word;
+}
+
+li strong {
+color: var(--output);
+font-size: 22px;
+display: inline-block;
+margin-left: 8px;
+}
+
+.foot {
+font-size: 15px;
+opacity: 0.8;
+margin-top: 10px;
+}
+
+/* ---Responsiveness (Tablets and Phones) --- */
+@media screen and (max-width: 640px) {
+.overall-card-container {
+    padding: 25px 20px;
+}
+
+.desc, .error {
+    font-size: 16px;
+}
+
+.found {
+    font-size: 18px;
+}
+
+li {
+    font-size: 18px;
+}
+
+li strong {
+    font-size: 16px;
+}
 }
