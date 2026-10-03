@@ -35,6 +35,7 @@ display: flex;
 justify-content: center;
 align-items: center;
 gap: 20px;
+padding: 15px 0;
 }
 
 h1 {
@@ -72,13 +73,16 @@ color: var(--olive-blue);
 }
 
 .error {
-color: red;
+color: rgb(209, 0, 0);
 font-size: 20px;
 }
 
 .found {
-color: rgb(125, 228, 125);
+color: rgb(29, 242, 29);
 font-size: 25px;
+position: relative;
+margin-left: auto;
+margin-right: auto;
 }
 
 ol {

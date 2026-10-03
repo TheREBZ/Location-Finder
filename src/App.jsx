@@ -24,9 +24,9 @@ const App = () => {
           } finally {
             setLoading(false);
           }
-      }
-    fetchLocation();
-      }, []);
+        }
+        fetchLocation();
+      },[]);
       
   return (
     <>
@@ -36,10 +36,10 @@ const App = () => {
     </div>
       <div className='overall-card-container'>
         <div className='card-content'>
-          <h2 className='desc'>Find/Track any Location anywhere in the world</h2>
+          <h2 className='desc'>Find/Track your location anywhere in the world</h2>
           {!loading && location && (<h2 className='desc found'>Found You!</h2>)}
-          {loading && <h2 className='desc find'>Finding your location...</h2>}
-          {error && <h2 className='desc error'>Error: {error}</h2>}
+          {loading && (<h2 className='desc find'>Finding your location...</h2>)}
+          {error && (<h2 className='desc error'>Error: {error}</h2>)}
           {location && <ol>
             <li>IP Address:<strong>{location.ip}</strong></li>
             <li>Country:<strong>{location.country}</strong></li>
